@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .list-dot li::before {
+      content: "•";
+      color: #A4A4A4; /* Set the color of the dot */
+      margin-right: 0.5rem; /* Adjust the spacing between the dot and the text */
+    }
+  }
