@@ -3,7 +3,7 @@ import arrowdown from "../../assets/images/ArrowLineDown.svg";
 import Card from "../../components/cards/Card";
 import MultiLineChart from "../../components/lineChart/MultiLineChart";
 import BarChartCom from "../../components/barChart/BarChart";
-import PieChartCom from "../../components/pieChart/pieChart";
+import PieChartCom from "../../components/pieChart/PieChartCom";
 import StreetLineChart from "../../components/StreetLineChart/StreetLineChart";
 import HeaderBreadCrumb from "../../components/BreadCrumbs/HeaderBreadCrumb";
 
