@@ -9,4 +9,22 @@
       color: #A4A4A4; /* Set the color of the dot */
       margin-right: 0.5rem; /* Adjust the spacing between the dot and the text */
     }
+    .list-dot-black li::before {
+      content: "•";
+      color: #1c1c1c; /* Set the color of the dot */
+      margin-right: 0.5rem; /* Adjust the spacing between the dot and the text */
+    }
+    .list-dot p::before {
+      content: "•";
+      color: #A4A4A4; /* Set the color of the dot */
+      margin-right: 0.5rem; /* Adjust the spacing between the dot and the text */
+    }
   }
+
+  @media (max-width: 768px) { 
+    .recharts-responsive-container{
+        height: 300px !important;
+    }
+  }
+  
+  

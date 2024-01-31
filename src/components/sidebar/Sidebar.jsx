@@ -13,7 +13,7 @@ import notebook from "../../assets/images/Notebook.svg";
 
 const Sidebar = () => {
   return (
-    <div className=" border-r-2 dark:border-[#333333] flex flex-col py-5 px-4 gap-4">
+    <div className=" hidden lg:flex flex-col py-5 px-4 gap-4 border-r-2 dark:border-[#333333] ">
       <div className="flex ">
         <img src={userimg} className="w-6 h-6" />
         <p className=" text-[16px] text-[#1c1c1c] ml-2">ByeWind</p>
@@ -72,12 +72,12 @@ const Sidebar = () => {
         <p className="text-[#A4A4A4] pl-3 mb-2">Pages</p>
         <div className="flex flex-col gap-2">
           <div>
-          <div className=" flex  pl-3 gap-1">
-            <img src={arrowdown} />
-            <img src={identification} />
-            <p>User Profile</p>
-          </div>
-          <div className="pt-2 flex items-center justify-center">
+            <div className=" flex  pl-3 gap-1">
+              <img src={arrowdown} />
+              <img src={identification} />
+              <p>User Profile</p>
+            </div>
+            <div className="pt-2 flex items-center justify-center">
               <ul className="flex-col flex gap-2">
                 <li>Overview</li>
                 <li>Projects</li>

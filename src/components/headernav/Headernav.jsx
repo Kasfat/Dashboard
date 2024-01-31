@@ -1,14 +1,15 @@
 import sidebarImg from "../../assets/images/Sidebar.svg";
-import sidebardark from "../../assets/images/Sidebardark.svg";
+
 import starImg from "../../assets/images/Star.svg";
-import stardark from "../../assets/images/Stardark.svg";
+
 import bell from "../../assets/images/Bell.svg";
-import belldark from "../../assets/images/Belldark.svg";
+
 import sun from "../../assets/images/Sun.svg";
-import sundark from "../../assets/images/Sundark.svg";
+
 import clock from "../../assets/images/ClockCounterClockwise.svg";
-import clockdark from "../../assets/images/Clockdark.svg";
+
 import search from "../../assets/images/Search.svg";
+import HeaderBreadCrumb from "../BreadCrumbs/HeaderBreadCrumb";
 
 const Headernav = () => {
   // const { theme, setTheme } = useContext(Themecontext);
@@ -22,10 +23,9 @@ const Headernav = () => {
         <div className=" flex gap-2">
           <img src={sidebarImg} className=" w-[28px] h-[28px] cursor-pointer" />
           <img src={starImg} className=" w-[28px] h-[28px] cursor-pointer" />
-
-          <p className="text-[#A4A4A4] cursor-pointer">DashBoards</p>
-          <span className="text-[#A4A4A4]"> / </span>
-          <p className=" dark:text-white">Default</p>
+          <div className=" hidden md:flex lg:hidden xl:flex">
+            <HeaderBreadCrumb />
+          </div>
         </div>
         <div className="flex">
           <div className=" mr-5 relative">
