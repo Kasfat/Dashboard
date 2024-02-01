@@ -8,8 +8,13 @@ const Layout = ({ children }) => {
   const [showSideBar, setShowSideBar] = useState(true);
   const [showRightSideBar, setRightSideBar] = useState(true);
 
+  // Set default show sidebar bool value depends screen size
+  let screenWidth = window.innerWidth;
+  useEffect(() => {
+    screenWidth < 1024 ? setShowSideBar(false) : setShowSideBar(true);
+  }, [screenWidth]);
+
   const handleClick = () => {
-    // console.log("frist");
     setShowSideBar(!showSideBar);
   };
 
@@ -29,17 +34,17 @@ const Layout = ({ children }) => {
     // </div>
     // </Themecontext.Provider>
     <div
-      className={`w-full relative h-[100vh] grid ${
+      className={`w-full relative grid grid-cols-[minmax(auto,1fr)] ${
         showSideBar && showRightSideBar
-        ? 'grid-cols-[212px_minmax(auto,1fr)_280px]'
-        : !showSideBar && showRightSideBar
-        ? 'grid-cols-[minmax(auto,1fr),280px]'
-        : showSideBar && !showRightSideBar
-        ? 'grid-cols-[212px,minmax(auto,1fr)]'
-        : 'grid-cols-[minmax(auto,1fr)]'
-    }`}
+          ? `lg:grid-cols-[212px_minmax(auto,1fr)_280px]`
+          : !showSideBar && showRightSideBar
+          ? `lg:grid-cols-[minmax(auto,1fr),280px]`
+          : showSideBar && !showRightSideBar
+          ? `lg:grid-cols-[212px,minmax(auto,1fr)]`
+          : null
+      }`}
     >
-    {showSideBar && <Sidebar showSideBar={showSideBar}/>}
+      <Sidebar showSideBar={showSideBar} />
       <div className="col-span-3 lg:col-span-1">
         <Headernav
           onClickSidebar={handleClick}

@@ -11,10 +11,15 @@ import userthree from "../../assets/images/UsersThree.svg";
 import chat from "../../assets/images/ChatsTeardrop.svg";
 import notebook from "../../assets/images/Notebook.svg";
 
-const Sidebar = ({showSideBar}) => {
-  
+const Sidebar = ({ showSideBar }) => {
   return (
-    <div className={`${showSideBar ?'hidden':'absolute top-0 right-0 bg-slate-500 transition-transform translate-x-full duration-700 ease-in-out '} lg:flex flex-col py-5 px-4 gap-4 border-r-2 dark:border-[#333333]`}>
+    <div
+      className={
+        showSideBar === true
+          ? `absolute bg-slate-50 z-10 h-screen overflow-auto py-6 top-[74px] px-5  lg:relative lg:top-0 lg:flex lg:flex-col lg:py-5 lg:px-4 lg:gap-4 lg:border-r-2 dark:border-[#333333]`
+          : `hidden`
+      }
+    >
       <div className="flex ">
         <img src={userimg} className="w-6 h-6" />
         <p className=" text-[16px] text-[#1c1c1c] ml-2">ByeWind</p>

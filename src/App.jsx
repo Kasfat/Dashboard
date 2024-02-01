@@ -1,19 +1,16 @@
-import Layout from "./components/layout/Layout"
-import Dashboard from "./pages/dashboard/Dashboard"
-
-
+import Layout from "./components/layout/Layout";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
-  
   return (
     <>
       <div className="">
-         <Layout>
-          <Dashboard/>
-         </Layout>
+        <Layout>
+          <Dashboard />
+        </Layout>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
