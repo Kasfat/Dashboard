@@ -27,16 +27,16 @@ const Dashboard = () => {
             <Card />
             <Card />
           </div>
-          <div className="grid grid-flow-row my-7 xl:grid-cols-7 xl:gap-7">
-            <div className="bg-[#F7F9FB] p-6 rounded-2xl xl:col-span-5">
+          <div className="grid grid-cols-1 my-7 xl:grid-cols-7 xl:gap-7">
+            <div className="bg-[#F7F9FB] col-span-1 p-6 rounded-2xl xl:col-span-5">
               <div className=" flex justify-between mb-3">
-                <p className=" font-semibold text-[18px]">Total Users</p>
-                <p className=" text-[#C1C1C1]">Total Projects</p>
-                <p className=" text-[#C1C1C1]">Operating Status</p>
+                <p className=" font-semibold text-[12px] sm:text-[18px]">Total Users</p>
+                <p className=" text-[#C1C1C1] text-[8px] sm:text-[18px]">Total Projects</p>
+                <p className=" text-[#C1C1C1] text-[8px] sm:text-[18px]">Operating Status</p>
                 <div className=" border-l-2 border-slate-300"></div>
                 <ul className="flex flex-row gap-2 list-dot-black">
-                  <li>Current Week</li>
-                  <li>Previous Week</li>
+                  <li className="text-[12px] sm:text-[18px]">Current Week</li>
+                  <li className="text-[12px] sm:text-[18px]">Previous Week</li>
                 </ul>
               </div>
               {/* Line chart Secction */}
@@ -47,7 +47,7 @@ const Dashboard = () => {
             <StreetLineChart />
             {/* Street Line chart Secction */}
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Bar chart Secction */}
             <div className=" p-6 bg-[#F7F9FB] rounded-2xl">
               <p className="text-[18px] text-center font-bold">

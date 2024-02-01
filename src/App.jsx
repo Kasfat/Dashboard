@@ -1,14 +1,15 @@
 import Layout from "./components/layout/Layout"
-import Dashboard from "./pages/dashboard"
+import Dashboard from "./pages/dashboard/Dashboard"
+
 
 
 function App() {
   
   return (
     <>
-      <div>
+      <div className="">
          <Layout>
-            <Dashboard/>
+          <Dashboard/>
          </Layout>
       </div>
     </>

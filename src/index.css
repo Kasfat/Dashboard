@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*,body{
+  margin: 0;
+  padding: 0;
+}
+
+
 
 @layer utilities {
     .list-dot li::before {
@@ -21,9 +27,18 @@
     }
   }
 
+  .hiddenxx{
+    transform: translateX(-10%);
+  }
+
   @media (max-width: 768px) { 
     .recharts-responsive-container{
         height: 300px !important;
+    }
+  }
+  @media (max-width: 360px) { 
+    .header_nav{
+        padding: 10px 1px;
     }
   }
   
