@@ -10,7 +10,7 @@ import HeaderBreadCrumb from "../../components/BreadCrumbs/HeaderBreadCrumb";
 const Dashboard = () => {
   return (
     <>
-      <div className=" pl-7 md:hidden lg:flex xl:hidden">
+      <div className=" pl-7 sm:hidden lg:flex xl:hidden">
         <HeaderBreadCrumb />
       </div>
       <div className=" p-7">

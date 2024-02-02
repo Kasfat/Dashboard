@@ -20,16 +20,17 @@ const Headernav = ({onClickSidebar, onClickRightBar}) => {
 
   return (
     <>
-      <div className=" px-7 py-5 w-full border-b-2 dark:border-[#333333] flex items-center justify-between header_nav">
+      {/* <div className=" px-7 py-5 w-full border-b-2 dark:border-[#333333] flex items-center justify-between header_nav"> */}
+      <div className=" flex w-full py-5 border-b-2 items-center justify-center gap-1 sm:px-7 sm:justify-between header_nav">
         <div className=" flex gap-1 sm:gap-2">
           <img onClick={onClickSidebar} src={sidebarImg} className=" w-[28px] h-[28px] cursor-pointer" />
-          <img src={starImg} className=" w-[28px] h-[28px] cursor-pointer" />
-          <div className=" hidden md:flex lg:hidden xl:flex">
+          {/* <img src={starImg} className=" w-[28px] h-[28px] cursor-pointer" /> */}
+          <div className=" hidden sm:flex lg:hidden xl:flex">
             <HeaderBreadCrumb />
           </div>
         </div>
         <div className="flex">
-          <div className=" mr-0 sm:mr-5 relative">
+          <div className=" mr-0 sm:mr-2 lg:mr-5 relative">
             <div className=" absolute left-1 top-2">
               <img className="" src={search} />
             </div>

@@ -16,8 +16,8 @@ const Sidebar = ({ showSideBar }) => {
     <div
       className={
         showSideBar === true
-          ? `absolute bg-slate-50 z-10 h-screen overflow-auto py-6 top-[74px] px-5  lg:relative lg:top-0 lg:flex lg:flex-col lg:py-5 lg:px-4 lg:gap-4 lg:border-r-2 dark:border-[#333333]`
-          : `hidden`
+          ? `absolute bg-slate-50 z-10 h-screen overflow-auto py-6 top-[74px] px-5 transition-transform translate-x-0 duration-1000 ease-in-out lg:relative lg:top-0 lg:flex lg:flex-col lg:bg-white lg:py-5 lg:px-4 lg:gap-4 lg:border-r-2 lg:h-full dark:border-[#333333]`
+          : ` absolute bg-slate-50 z-10 h-screen overflow-auto py-6 top-[74px] px-5 translate-x-[-212px] duration-1000 ease-in-out lg:hidden`
       }
     >
       <div className="flex ">

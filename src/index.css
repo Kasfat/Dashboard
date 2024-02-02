@@ -27,9 +27,9 @@
     }
   }
 
-  .hiddenxx{
-    transform: translateX(-10%);
-  }
+  /* .visibleDiv{
+    transform: translateX(0);
+  } */
 
   @media (max-width: 768px) { 
     .recharts-responsive-container{
@@ -37,8 +37,11 @@
     }
   }
   @media (max-width: 360px) { 
-    .header_nav{
+    /* .header_nav{
         padding: 10px 1px;
+    } */
+    input{
+      width: 160px !important;
     }
   }
   
