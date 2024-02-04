@@ -21,7 +21,7 @@ const Headernav = ({onClickSidebar, onClickRightBar}) => {
   return (
     <>
       {/* <div className=" px-7 py-5 w-full border-b-2 dark:border-[#333333] flex items-center justify-between header_nav"> */}
-      <div className=" flex w-full py-5 border-b-2 items-center justify-center gap-1 sm:px-7 sm:justify-between header_nav">
+      <div className=" flex w-full py-5 border-b-2 items-center justify-center gap-1 overflow-x-hidden sm:px-7 sm:justify-between header_nav">
         <div className=" flex gap-1 sm:gap-2">
           <img onClick={onClickSidebar} src={sidebarImg} className=" w-[28px] h-[28px] cursor-pointer" />
           {/* <img src={starImg} className=" w-[28px] h-[28px] cursor-pointer" /> */}

@@ -9,9 +9,15 @@ import male06 from "../../assets/images/Male06.png";
 import male08 from "../../assets/images/Male08.png";
 import male10 from "../../assets/images/3D03.png";
 
-const Rightbar = () => {
+const Rightbar = ({ showRightSideBar }) => {
   return (
-    <div className=" hidden lg:flex  flex-col border-l-2 p-5 dark:border-[#333333] ">
+    <div
+      className={`${
+        showRightSideBar === true 
+          ? " absolute bg-slate-50 z-10 p-5 h-screen overflow-auto top-[75px] right-0 transition-transform translate-x-0 duration-1000 ease-in-out lg:relative lg:top-0 lg:flex lg:flex-col lg:border-l-2 lg:bg-white lg:h-full lg:p-5 dark:border-[#333333] "
+          : " absolute bg-slate-50 z-10 h-screen overflow-auto top-[75px] right-0 translate-x-[288px] duration-1000 ease-in-out lg:hidden "
+      }`}
+    >
       <div>
         <p className=" px-1 py-2 font-semibold">Notification</p>
         <div className="px-1 py-2 mt-2 flex flex-col gap-4">

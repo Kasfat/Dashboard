@@ -10,14 +10,21 @@ import identificationcard from "../../assets/images/IdentificationCard.svg";
 import userthree from "../../assets/images/UsersThree.svg";
 import chat from "../../assets/images/ChatsTeardrop.svg";
 import notebook from "../../assets/images/Notebook.svg";
+import { useState } from "react";
 
 const Sidebar = ({ showSideBar }) => {
+  const [showSubmenu, SetShowSubmenu] = useState(false);
+
+    const handleSubmenu = ()=>{
+      SetShowSubmenu(!showSubmenu)
+    }
+
   return (
     <div
       className={
-        showSideBar === true
+        showSideBar === true 
           ? `absolute bg-slate-50 z-10 h-screen overflow-auto py-6 top-[74px] px-5 transition-transform translate-x-0 duration-1000 ease-in-out lg:relative lg:top-0 lg:flex lg:flex-col lg:bg-white lg:py-5 lg:px-4 lg:gap-4 lg:border-r-2 lg:h-full dark:border-[#333333]`
-          : ` absolute bg-slate-50 z-10 h-screen overflow-auto py-6 top-[74px] px-5 translate-x-[-212px] duration-1000 ease-in-out lg:hidden`
+          : ` absolute bg-slate-50 z-10 h-screen overflow-auto py-6 top-[74px] px-5 translate-x-[-215px] duration-1000 ease-in-out lg:hidden`
       }
     >
       <div className="flex ">
@@ -78,12 +85,13 @@ const Sidebar = ({ showSideBar }) => {
         <p className="text-[#A4A4A4] pl-3 mb-2">Pages</p>
         <div className="flex flex-col gap-2">
           <div>
-            <div className=" flex  pl-3 gap-1">
+            <div onClick={handleSubmenu} className=" flex  pl-3 gap-1 cursor-pointer">
               <img src={arrowdown} />
               <img src={identification} />
               <p>User Profile</p>
             </div>
-            <div className="pt-2 flex items-center justify-center">
+            { showSubmenu && (
+              <div className="pt-2 flex items-center justify-center">
               <ul className="flex-col flex gap-2">
                 <li>Overview</li>
                 <li>Projects</li>
@@ -92,6 +100,8 @@ const Sidebar = ({ showSideBar }) => {
                 <li>Followers</li>
               </ul>
             </div>
+            )            
+            }
           </div>
           <div className=" flex pl-3 gap-1">
             <img src={arrowright} />

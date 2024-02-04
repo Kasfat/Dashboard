@@ -12,14 +12,26 @@ const Layout = ({ children }) => {
   let screenWidth = window.innerWidth;
   useEffect(() => {
     screenWidth < 1024 ? setShowSideBar(false) : setShowSideBar(true);
+    screenWidth < 1024 ? setRightSideBar(false) : setShowSideBar(true);
   }, [screenWidth]);
 
   const handleClick = () => {
-    setShowSideBar(!showSideBar);
+      setShowSideBar(!showSideBar)
+      
+    if(screenWidth <1024){
+      setRightSideBar(false)
+    }
+      
   };
 
   const handleClickRight = () => {
     setRightSideBar(!showRightSideBar);
+    
+    if(screenWidth <1024){
+      setShowSideBar(false)
+    }
+    
+    
   };
   // const [theme, setTheme] = useState("light");
   // useEffect(()=>{
@@ -44,15 +56,15 @@ const Layout = ({ children }) => {
           : null
       }`}
     >
-      <Sidebar showSideBar={showSideBar} />
-      <div className="col-span-3 lg:col-span-1">
+      <Sidebar showRightSideBar={showRightSideBar} showSideBar={showSideBar} />
+      <div className=" overflow-hidden col-span-3 lg:col-span-1">
         <Headernav
           onClickSidebar={handleClick}
           onClickRightBar={handleClickRight}
         />
         {children}
       </div>
-      {showRightSideBar && <Rightbar />}
+      <Rightbar showRightSideBar={showRightSideBar} showSideBar={showSideBar}/>
     </div>
   );
 };

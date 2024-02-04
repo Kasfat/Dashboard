@@ -4,7 +4,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 function App() {
   return (
     <>
-      <div className="">
+      <div className=" overflow-hidden">
         <Layout>
           <Dashboard />
         </Layout>
